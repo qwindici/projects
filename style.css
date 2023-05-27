@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:wght@400;500;700;800;900&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Wix+Madefor+Display:wght@400;500;700;800&display=swap");
+
+/* https://www.schemecolor.com/indian-territory-color-combination.php */
+
+:root {
+  --orange: #ff8811;
+  --white: #fcefef;
+  --black: #231c07;
+  --bistre: #392a16;
+  --pink: #d7c2c5;
+  --violet: #623a63;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: visible;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  background-color: var(--black);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Wix Madefor Display", sans-serif;
+}
+
+header {
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  background-color: var(--orange);
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+.moon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100px;
+  height: 200px;
+  width: 330px;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.moon.reversed {
+  transform: translateX(-50%) rotate(180deg);
+}
+h1 {
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  color: var(--black);
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 7.5rem;
+  z-index: 35;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+}
+.container {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-top: 32px;
+  max-width: 1000px;
+  height: fit-content;
+  width: 94%;
+  display: flex;
+  justify-content: center;
+}
+
+/* buttons */
+
+button {
+  font-family: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 5px;
+  color: var(--white);
+  border: none;
+  transition: all 0.7s ease-in-out;
+}
+
+button:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.btn-back-home {
+  position: absolute;
+  top: 110px;
+  left: 10px;
+  transform: translateX(-500px);
+}
+
+.btn-back-home:hover {
+  left: 0px;
+}
+
+.btn-back-home.display {
+  transform: translateX(0px);
+}
+
+.arrow {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 18px;
+}
+.btn-cre:hover {
+  width: 20%;
+}
+
+/* grid */
+
+.parent.grid {
+  padding: 4rem;
+
+  margin-top: 0rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10rem;
+  grid-row-gap: 10rem;
+}
+
+.parent.no-grid {
+  height: auto;
+}
+
+/* lines  */
+
+.hor-line {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 0.3rem;
+
+  z-index: -2;
+  width: 5rem;
+  top: 20%;
+  background-color: var(--pink);
+  z-index: 10;
+}
+
+.ver-line {
+  display: inline-block;
+  position: absolute;
+  width: 0.3rem;
+
+  top: 20%;
+  left: 50%;
+  transform: translateX(-2px);
+  height: 16.3rem;
+  z-index: -2;
+  background-color: var(--pink);
+  z-index: 10;
+}
+
+.sub-line {
+  display: inline-block;
+  position: absolute;
+  width: 29%;
+  height: 3rem;
+
+  border-top: 0.3rem solid var(--pink);
+  border-left: 0.3rem solid var(--pink);
+  border-right: 0.3rem solid var(--pink);
+  border-radius: 10px 10px 0 0;
+
+  z-index: -2;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+}
+
+/* images */
+.circle_img {
+  display: block;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+.small {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+}
+
+.circle_img.nandi {
+  background-image: url(pics/nandi.png);
+}
+
+.circle_img.shiva {
+  background-image: url(pics/shiva-.png);
+}
+
+.circle_img.parvati {
+  background-image: url(pics/parvati3.png);
+}
+
+.circle_img.kali {
+  background-image: url(pics/kali.png);
+}
+.circle_img.peacock {
+  background-image: url(pics/peacock.png);
+}
+
+.circle_img.murugan {
+  background-image: url(pics/murugan.png);
+}
+
+.circle_img.ganesha {
+  /* background-image: linear-gradient(to right bottom, #aa3834, #820000), */
+  background-image: url(pics/Ganesha.png);
+}
+
+.circle_img.rat {
+  background-image: url(pics/rat.png);
+}
+
+/* names */
+.name {
+  font-family: "Wix Madefor Display", sans-serif;
+  display: block;
+  color: var(--white);
+  background-color: transparent;
+
+  font-size: 3rem;
+  text-align: center;
+  transition: all 0.5s ease-in;
+  z-index: 70;
+}
+
+.line-break {
+  width: 100%;
+}
+
+.name.animal {
+  margin-top: -11rem;
+  font-size: 2rem;
+}
+
+.sanskrit {
+  color: var(--orange);
+  margin-top: 0.5rem;
+  display: block;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-style: italic;
+}
+
+/* cells */
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  transition: all 0.5s ease-in;
+}
+
+/* hover */
+.cell:hover .name {
+  background-color: var(--orange);
+  color: var(--black);
+}
+
+.cell:hover .circle_img {
+  transform: scale(1.1);
+}
+
+.cell.animal {
+  z-index: 10;
+}
+
+.cell.nandi,
+.cell.peacock {
+  margin-right: -15rem;
+}
+
+.cell.kali,
+.cell.rat {
+  margin-left: -15rem;
+}
+
+.active {
+  width: 100%; /* fa riferimento a .parent.no-grid */
+  height: min-content;
+  transition: all 0.5s ease-in;
+}
+
+.cell.active:hover .name {
+  background-color: transparent;
+  color: var(--pink);
+}
+
+/* text */
+
+.text {
+  color: var(--black);
+  width: 100%;
+  height: max-content;
+  background-color: var(--pink);
+  font-size: 1.9rem;
+  text-align: justify;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: all 2s ease-in-out;
+  line-height: 150%;
+  border-bottom: 3 0px solid var(--violet);
+}
+
+.description {
+  margin-top: 1rem;
+}
+.att {
+  text-align: center;
+  letter-spacing: 3px;
+  color: var(--violet);
+  font-weight: 700;
+}
+
+.sub-title {
+  margin-top: 2rem;
+  font-size: 4rem;
+  font-family: "Kaushan Script", cursive;
+  margin-bottom: 0rem;
+  color: var(--violet);
+}
+
+.story {
+  margin: 0 auto;
+  line-height: 150%;
+  color: var(--black);
+  background-color: var(--white);
+  padding: 0.8rem;
+  border-left: 5px solid var(--violet);
+  border-right: 5px solid var(--violet);
+  font-weight: 500;
+}
+
+.source {
+  display: block;
+  text-align: center;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  margin: 0;
+
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+/* links */
+a:-webkit-any-link {
+  color: var(--violet);
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+
+a:-webkit-any-link:hover {
+  color: var(--bistre);
+  background-color: var(--orange);
+}
+
+/* credits */
+
+.credits {
+  display: block;
+  color: var(--white);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 16px;
+  transition: all 0.3s ease-in;
+  line-height: 170%;
+}
+
+.credits.hidden {
+  bottom: -1000px;
+  display: none;
+}
+
+.credits a:-webkit-any-link {
+  color: var(--orange);
+}
+
+.credits a:-webkit-any-link:hover {
+  color: var(--white);
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+/* inactive */
+.inactive {
+  display: none;
+  opacity: 0;
+}
